@@ -1,0 +1,22 @@
+﻿<Window x:Class="CafeKoldaev.Waiter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CafeKoldaev"
+        mc:Ignorable="d"
+        Title="Официант" Height="450" Width="800">
+    <Grid>
+        <ListView x:Name="OrdersList" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Width="300">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Номер заказа" Width="100" DisplayMemberBinding="{Binding OrderNumber}"/>
+                    <GridViewColumn Header="Столик" Width="100" DisplayMemberBinding="{Binding TableNumber}"/>
+                    <GridViewColumn Header="Количество клиентов" Width="100" DisplayMemberBinding="{Binding CustomerCount}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Создать " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="330" Width="150" Click="CreateOrder_Click"/> 
+        +
+    </Grid>
+</Window>
